@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Viberank Design System Custom Styles */
+
+@layer base {
+  :root {
+    --primary: #0F172A;
+    --secondary: #0D9488;
+    --accent: #F97316;
+    --success: #10B981;
+    --warning: #FBBF24;
+    --error: #EF4444;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-gray-900 text-gray-300 font-sans text-sm;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+}
+
+/* Hide number input steppers */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
+
+/* Utility classes */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* Card hover effects */
+@layer components {
+  .card-hover-effect {
+    @apply transition-all duration-200 ease-in-out;
+  }
+  
+  .card-hover-effect:hover {
+    @apply -translate-y-1 shadow-soft;
+  }
+  
+  .vote-button {
+    @apply transition-all duration-200;
+  }
+  
+  .vote-button:hover {
+    @apply scale-110;
+  }
+  
+  .vote-button:active {
+    @apply scale-95;
+  }
+}
+
+/* Security protection class */
+.security-blur-protected {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slide-in-from-bottom {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes confetti-fall {
+  0% { transform: translateY(-100vh) rotate(0deg) scale(1); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg) scale(0.5); opacity: 0; }
+}
+
+@keyframes confetti-sway {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(30px); }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Blog content styling for dark mode */
+.blog-content {
+  @apply text-gray-300 leading-relaxed text-justify;
+}
+
+.blog-content h1,
+.blog-content h2,
+.blog-content h3,
+.blog-content h4,
+.blog-content h5,
+.blog-content h6 {
+  @apply text-white font-bold mt-8 mb-4;
+}
+
+.blog-content code {
+  @apply bg-gray-700 text-emerald-300 px-1 py-0.5 rounded font-mono text-sm;
+}
+
+.blog-content pre {
+  @apply bg-gray-700 text-emerald-300 p-4 rounded-lg overflow-x-auto;
+}
+
+.blog-content a {
+  @apply text-emerald-300 hover:text-emerald-200 underline transition-colors;
+}
+
+.blog-content blockquote {
+  @apply border-l-4 border-secondary-500 pl-4 italic text-gray-400;
+}
+
+.blog-content ul,
+.blog-content ol {
+  @apply ml-6 my-4;
+}
+
+.blog-content li {
+  @apply mb-2;
+}
+
+/* Mobile blog content adjustments */
+@media (max-width: 768px) {
+  .blog-content {
+    @apply text-gray-400;
+  }
+}
