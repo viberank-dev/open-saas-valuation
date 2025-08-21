@@ -20,7 +20,7 @@ Created by [viberank.dev](https://viberank.dev) - A platform to boost your app's
 
 ## 🎥 Demo
 
-![Demo Video](demo.gif)
+[![Demo Video](https://img.youtube.com/vi/do8ezP-TtB4/maxresdefault.jpg)](https://www.youtube.com/watch?v=do8ezP-TtB4)
 
 ## 🚀 Quick Start
 
