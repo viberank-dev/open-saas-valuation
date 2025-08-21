@@ -18,6 +18,13 @@ This calculator provides data-driven valuations based on:
 
 Created by [viberank.dev](https://viberank.dev) - A platform to boost your app's visibility and drive more traffic from the tech community.
 
+## 🎥 Demo
+
+<video width="100%" controls>
+  <source src="demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ## 🚀 Quick Start
 
 ```bash
