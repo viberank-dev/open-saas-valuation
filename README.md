@@ -18,8 +18,6 @@ This calculator provides data-driven valuations based on:
 
 Created by [viberank.dev](https://viberank.dev) - A platform to boost your app's visibility and drive more traffic from the tech community.
 
-## 🎥 Demo
-
 [![Demo Video](https://img.youtube.com/vi/do8ezP-TtB4/maxresdefault.jpg)](https://www.youtube.com/watch?v=do8ezP-TtB4)
 
 ## 🚀 Quick Start
