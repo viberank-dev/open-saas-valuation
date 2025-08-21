@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="viberank_image.jpg" alt="Viberank Logo" width="400"/>
+  <img src="viberank_image.jpg" alt="Viberank Logo" width="500"/>
   
   # Open SaaS Valuation Calculator
 
