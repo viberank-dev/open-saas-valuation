@@ -250,7 +250,7 @@ const ValuationResults: React.FC<ValuationResultsProps> = ({ results, onReset })
       {showShareModal && (
         <ShareModal 
           onClose={() => setShowShareModal(false)}
-          url={window.location.href}
+          url={`https://viberank.dev${window.location.pathname}${window.location.search}`}
           valuation={ValuationCalculator.formatCurrency(results.high)}
         />
       )}
