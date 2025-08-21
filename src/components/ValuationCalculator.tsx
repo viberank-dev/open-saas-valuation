@@ -65,7 +65,7 @@ const ValuationCalculator: React.FC = () => {
               </h1>
             </div>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Calculate your early-stage app's worth using multiple proven valuation methodologies.
+              Calculate your early-stage app's worth using multiple valuation methodologies.
             </p>
           </div>
         </div>
