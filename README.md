@@ -8,7 +8,7 @@
 
 A modern web application for calculating early-stage SaaS and app valuations using multiple methodologies and advanced analytics.
 
-## Overview
+## 📋 Overview
 
 This calculator provides data-driven valuations based on:
 - **Revenue metrics** (MRR, profit margins, fixed costs)
@@ -18,7 +18,7 @@ This calculator provides data-driven valuations based on:
 
 Created by [viberank.dev](https://viberank.dev) - A platform to boost your app's visibility and drive more traffic from the tech community.
 
-## Quick Start
+## 🚀 Quick Start
 
 ```bash
 git clone https://github.com/viberank-dev/open-saas-valuation.git
@@ -29,7 +29,7 @@ npm run dev
 
 Open `http://localhost:5173` in your browser.
 
-## How It Works
+## ⚙️ How It Works
 
 ### Valuation Methods
 
@@ -62,7 +62,7 @@ Open `http://localhost:5173` in your browser.
 - LinkedIn, X (Twitter), Instagram, TikTok, YouTube followers
 - Reddit Karma
 
-## Production Build
+## 🏗️ Production Build
 
 ```bash
 npm run build
@@ -70,10 +70,16 @@ npm run build
 
 Files output to `dist/` directory.
 
-## Important Disclaimer
+## ⚠️ Important Disclaimer
 
 This tool provides estimates based on industry benchmarks and should not be considered professional financial advice. Actual valuations vary significantly based on market conditions, competitive landscape, team experience, and revenue quality.
 
-## License
+## 📄 License
 
 MIT License - see LICENSE file for details.
+
+## 🔗 Links
+
+- **[Viberank.dev](https://viberank.dev)**
+- **[LinkedIn](https://www.linkedin.com/company/viberank.dev/)**
+- **[X / Twitter](https://x.com/viberank)**
