@@ -1,15 +1,12 @@
 import {
   ValuationData,
   CategoryValues,
-  SocialMediaValues,
   RevenueValuationResult,
   UserValuationResult,
   ValuationResults,
   ConfidenceResult
 } from '../types';
 
-// Standard hourly rate for development (USD)
-export const standardHourlyRate = 40; // Average global developer rate
 
 // Value per user by app category (USD)
 export const categoryValues: CategoryValues = {
@@ -71,7 +68,6 @@ export class ValuationCalculator {
 
   // User-based valuation
   static calculateUserValuation(
-    _activeUsers: number, 
     registrations: number, 
     appCategory: string,
     avgServicePrice: number = 0,
@@ -146,7 +142,7 @@ export class ValuationCalculator {
   }
 
   // Calculate confidence level
-  static calculateConfidence(data: ValuationData, valuationResults: ValuationResults): ConfidenceResult {
+  static calculateConfidence(data: ValuationData): ConfidenceResult {
     let score = 0;
     const factors: string[] = [];
     
@@ -279,7 +275,7 @@ export class ValuationCalculator {
   }
 
   // Generate insights
-  static generateInsights(data: ValuationData, valuationResults: ValuationResults, confidence: ConfidenceResult): string[] {
+  static generateInsights(data: ValuationData, _valuationResults: ValuationResults, confidence: ConfidenceResult): string[] {
     const insights: string[] = [];
     
     // Financial performance insights
@@ -396,7 +392,6 @@ export class ValuationCalculator {
     // Calculate individual valuations
     const revenueValuation = this.calculateRevenueValuation(data.mrr);
     const userValuation = this.calculateUserValuation(
-      data.activeUsers, 
       data.registrations, 
       data.appCategory,
       data.avgServicePrice || 0,
@@ -445,7 +440,7 @@ export class ValuationCalculator {
     };
     
     // Calculate confidence and insights
-    const confidence = this.calculateConfidence(data, results);
+    const confidence = this.calculateConfidence(data);
     const insights = this.generateInsights(data, results, confidence);
     
     return {

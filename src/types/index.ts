@@ -10,7 +10,6 @@ export interface ValuationData {
   uniqueVisitors: number;
   registrations: number;
   appCategory: AppCategory;
-  activeUsers: number;
   
   // Social Media
   linkedinFollowers: number;
@@ -28,27 +27,16 @@ export type AppCategory =
   | 'b2c_app'
   | 'other';
 
-export interface CountryRates {
-  [key: string]: number;
-}
 
 export type CategoryValues = {
   [key in AppCategory]: number;
 }
 
-export interface SocialMediaValues {
-  linkedin: number;
-  x: number;
-  reddit: number;
-  youtube: number;
-  instagram: number;
-  tiktok: number;
-}
 
 export interface ValuationResult {
   value: number;
   details?: string;
-  breakdown?: any;
+  breakdown?: Record<string, unknown>;
 }
 
 export interface RevenueValuationResult extends ValuationResult {

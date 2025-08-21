@@ -13,9 +13,10 @@ import {
 } from 'lucide-react';
 import { ValuationCalculator } from '../utils/valuationCalculator';
 import ShareModal from './ShareModal';
+import { ValuationResults as ValuationResultsType, ConfidenceResult } from '../types';
 
 interface ValuationResultsProps {
-  results: any;
+  results: ValuationResultsType & { confidence: ConfidenceResult; insights: string[] };
   onReset: () => void;
 }
 

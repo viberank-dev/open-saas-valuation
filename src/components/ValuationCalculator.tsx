@@ -1,27 +1,26 @@
 import React, { useState } from 'react';
-import { Calculator, TrendingUp, Users, Code, MessageSquare, DollarSign } from 'lucide-react';
+import { Calculator } from 'lucide-react';
 import ValuationForm from './ValuationForm';
 import ValuationResults from './ValuationResults';
-import { ValuationData, AppCategory } from '../types';
+import { ValuationData, AppCategory, ValuationResults as ValuationResultsType, ConfidenceResult } from '../types';
 import { ValuationCalculator as ValuationEngine } from '../utils/valuationCalculator';
 
 const ValuationCalculator: React.FC = () => {
   const [valuationData, setValuationData] = useState<ValuationData>({
-    mrr: undefined as any,
-    mrp: undefined as any,
-    uniqueVisitors: undefined as any,
-    registrations: undefined as any,
+    mrr: 0,
+    mrp: 0,
+    uniqueVisitors: 0,
+    registrations: 0,
     appCategory: 'b2b_saas' as AppCategory,
-    activeUsers: undefined as any,
-    linkedinFollowers: undefined as any,
-    xFollowers: undefined as any,
-    redditKarma: undefined as any,
-    youtubeSubscribers: undefined as any,
-    instagramFollowers: undefined as any,
-    tiktokFollowers: undefined as any,
+    linkedinFollowers: 0,
+    xFollowers: 0,
+    redditKarma: 0,
+    youtubeSubscribers: 0,
+    instagramFollowers: 0,
+    tiktokFollowers: 0,
   });
 
-  const [results, setResults] = useState<any>(null);
+  const [results, setResults] = useState<(ValuationResultsType & { confidence: ConfidenceResult; insights: string[] }) | null>(null);
   const [isCalculating, setIsCalculating] = useState(false);
 
   const handleCalculate = (data: ValuationData) => {
@@ -39,18 +38,17 @@ const ValuationCalculator: React.FC = () => {
   const resetCalculator = () => {
     setResults(null);
     setValuationData({
-      mrr: undefined as any,
-      mrp: undefined as any,
-      uniqueVisitors: undefined as any,
-      registrations: undefined as any,
+      mrr: 0,
+      mrp: 0,
+      uniqueVisitors: 0,
+      registrations: 0,
       appCategory: 'b2b_saas' as AppCategory,
-      activeUsers: undefined as any,
-      linkedinFollowers: undefined as any,
-      xFollowers: undefined as any,
-      redditKarma: undefined as any,
-      youtubeSubscribers: undefined as any,
-      instagramFollowers: undefined as any,
-      tiktokFollowers: undefined as any,
+      linkedinFollowers: 0,
+      xFollowers: 0,
+      redditKarma: 0,
+      youtubeSubscribers: 0,
+      instagramFollowers: 0,
+      tiktokFollowers: 0,
     });
   };
 

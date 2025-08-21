@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Loader2, DollarSign, Clock, Users, Share2 } from 'lucide-react';
-import { ValuationData, AppCategory, FormErrors } from '../types';
+import { Loader2, DollarSign, Users, Share2 } from 'lucide-react';
+import { ValuationData, FormErrors } from '../types';
 
 interface ValuationFormProps {
   onCalculate: (data: ValuationData) => void;
