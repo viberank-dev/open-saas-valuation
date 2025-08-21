@@ -1,196 +1,79 @@
-# SaaS Valuation App
+# Open SaaS Valuation Calculator
 
-A comprehensive React application for calculating early-stage app valuations based on multiple factors including revenue, user traction, development costs, and growth metrics.
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![Node.js](https://img.shields.io/badge/Node.js-16+-blue.svg)](https://nodejs.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.0+-646CFF.svg)](https://vitejs.dev/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
-## Features
+A modern web application for calculating early-stage SaaS and app valuations using multiple methodologies and advanced analytics.
 
-- **Multiple Valuation Methods**: 
-  - Revenue-based valuation using industry multiples
-  - User-based valuation by app type
-  - Cost-based valuation considering development time
-  - Social media value assessment
+## Overview
 
-- **Comprehensive Input Categories**:
-  - Financial metrics (MRR, MRP)
-  - Development metrics (hours per week, country rates)
-  - Timeline tracking (start date, launch date)
-  - User traction metrics
-  - Social media followers
-  - App classification and growth rates
+This calculator provides data-driven valuations based on:
+- **Revenue metrics** (MRR, profit margins, fixed costs)
+- **User traction** (registrations, conversion rates, visitor traffic)
+- **Social media presence** (platform-specific follower valuations)
+- **Market positioning** (category analysis with B2B SaaS, Mobile App, Game, B2C App, Other)
 
-- **Smart Analytics**:
-  - Growth multipliers for high-performing apps
-  - Risk adjustments for early-stage companies
-  - Industry-specific user value calculations
-  - Country-specific hourly rate adjustments
+Created by [viberank.dev](https://viberank.dev) - A platform to boost your app's visibility and drive more traffic from the tech community.
 
-- **Professional UI**:
-  - Dark/light mode support
-  - Responsive design
-  - Modern Tailwind CSS styling
-  - Interactive form validation
+## Quick Start
 
-## Tech Stack
+```bash
+git clone https://github.com/viberank-dev/open-saas-valuation.git
+cd open-saas-valuation
+npm install
+npm run dev
+```
 
-- **Frontend**: React 18 with TypeScript
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
-- **Linting**: ESLint with TypeScript support
+Open `http://localhost:5173` in your browser.
 
-## Getting Started
+## How It Works
 
-### Prerequisites
+### Valuation Methods
 
-- Node.js (version 16 or higher)
-- npm or yarn package manager
+1. **Revenue-Based**: ARR × 6x industry multiple
+2. **User-Based Projected ARR**: Registrations × conversion rate × pricing × 12 months × 6x
+3. **Social Media Value**: Followers × platform rates ($0.1-$2.0 per follower)
 
-### Installation
+### Key Features
 
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd saas-valuation-app
-   ```
+- **Enhanced Confidence Analysis**: 100-point scoring across revenue maturity, profitability, user engagement, market positioning, and social proof
+- **Smart Conversion Rates**: Custom rates or category defaults (B2B SaaS: 2-6%, Apps: 1-3%)
+- **Detailed Insights**: Profit margin analysis, cost efficiency, strategic recommendations
+- **Responsive Design**: Modern dark-mode interface with mobile optimization
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-   or
-   ```bash
-   yarn install
-   ```
+### Input Categories
 
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-   or
-   ```bash
-   yarn dev
-   ```
+**Financial Performance**
+- Monthly Recurring Revenue (MRR)
+- Monthly Recurring Profit (MRP)  
+- Conversion Rate (Registration to Paid %)
+- Fixed Monthly Costs (servers, domain, LLM, ads...)
 
-4. Open your browser and navigate to `http://localhost:5173`
+**User Traction**
+- Registrations per Month
+- Unique Visitors per Month
+- App Category (B2B SaaS, Mobile App, Game, B2C App, Other)
+- Average Service Price
 
-### Building for Production
+**Social Media Presence**
+- LinkedIn, X (Twitter), Instagram, TikTok, YouTube followers
+- Reddit Karma
 
-To build the application for production:
+## Production Build
 
 ```bash
 npm run build
 ```
-or
-```bash
-yarn build
-```
 
-The built files will be in the `dist` directory.
-
-## Usage
-
-### Input Fields
-
-1. **Financial Metrics**:
-   - **MRR (Monthly Recurring Revenue)**: Your app's monthly subscription revenue
-   - **MRP (Monthly Recurring Profit)**: Net profit after expenses
-
-2. **Development Metrics**:
-   - **Country**: Location for hourly rate calculations
-
-3. **Timeline**:
-   - **Started Building**: When development began
-   - **Launch Date**: When the app went live
-
-4. **User Traction**:
-   - **Unique Visitors/Month**: Monthly website/app visitors
-   - **Registrations/Month**: New user sign-ups monthly
-
-5. **Social Media**:
-   - Follower counts across LinkedIn, X (Twitter), and Reddit
-
-6. **App Classification**:
-   - **App Type**: Category (B2B SaaS, Gaming, E-commerce, etc.)
-   - **Growth Rate**: Year-over-year growth percentage
-
-### Valuation Methods
-
-The calculator uses four primary valuation methods:
-
-1. **Revenue-Based**: Multiplies Annual Recurring Revenue (ARR) by industry-standard multiples based on growth rate
-2. **User-Based**: Values active and projected users based on app type
-3. **Cost-Based**: Calculates replacement cost using development hours and country-specific rates
-4. **Social Media**: Assigns monetary value to social media following
-
-### Results Interpretation
-
-The calculator provides:
-- **Valuation Range**: Low, average, and high estimates
-- **Primary Method**: The most applicable valuation method for your app
-- **Method Breakdown**: Detailed calculations for each approach
-- **Key Insights**: Analysis of your app's strengths and areas for improvement
-- **Recommendations**: Strategic advice based on the valuation results
-
-## Valuation Methodology
-
-### Country Hourly Rates
-
-The app includes hourly development rates for 25+ countries, ranging from $15/hour (India) to $60/hour (UK).
-
-### User Values by App Type
-
-- **B2B SaaS**: $12-20 per user (avg $16)
-- **E-commerce**: $15-25 per user (avg $20)
-- **Productivity**: $10-15 per user (avg $12.5)
-- **Gaming**: $5-8 per user (avg $6.5)
-- **Social Networking**: $8-12 per user (avg $10)
-- **Content**: $6-10 per user (avg $8)
-
-### Revenue Multiples
-
-- **High Growth (>40% YoY)**: 7-10x ARR (avg 8.5x)
-- **Moderate Growth (20-40% YoY)**: 5-7x ARR (avg 6x)
-- **Low Growth (<20% YoY)**: 3-5x ARR (avg 4x)
-- **Unknown Growth**: 4-6x ARR (avg 5x)
-
-### Growth Multipliers
-
-The calculator applies growth multipliers for:
-- Recently launched apps with strong traction
-- High revenue growth rates
-- Strong user acquisition rates
-
-### Risk Adjustments
-
-- Early-stage apps (< 3 months in market) receive a 15% risk discount
-- Valuations are bounded by development costs to ensure realistic estimates
+Files output to `dist/` directory.
 
 ## Important Disclaimer
 
-This valuation calculator provides estimates based on industry benchmarks and should not be considered professional financial advice. Actual app valuations can vary significantly based on:
-
-- Market conditions
-- Competitive landscape
-- Team experience
-- Technology differentiation
-- Customer retention rates
-- Revenue quality and predictability
-
-Always consult with qualified financial professionals for investment decisions.
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+This tool provides estimates based on industry benchmarks and should not be considered professional financial advice. Actual valuations vary significantly based on market conditions, competitive landscape, team experience, and revenue quality.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Support
-
-If you encounter any issues or have questions, please open an issue on the GitHub repository.
-
+MIT License - see LICENSE file for details.
