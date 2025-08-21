@@ -20,10 +20,7 @@ Created by [viberank.dev](https://viberank.dev) - A platform to boost your app's
 
 ## 🎥 Demo
 
-<video width="100%" controls>
-  <source src="demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+![Demo Video](demo.gif)
 
 ## 🚀 Quick Start
 
